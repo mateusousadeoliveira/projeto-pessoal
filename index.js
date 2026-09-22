@@ -5,14 +5,17 @@ let percentual_restante
 let statusCupom
 let resultado
 
+//verifica se seu saldo é suficiente
 if (saldo >= total){
     resultado = `Seu saldo atual é de ${saldo}R$
     O valor total é de ${total}R$
     Conclusão: seu saldo já o suficiente, então o que você está fazendo aqui?`
 } else {
+        //calcula o valor restante e percentual
         valor_restante = total - saldo
         percentual_restante = (valor_restante / total) * 100
 
+        //dá uma respectiva resposta para cada situação possível
         if (percentual_restante <= 10){
         statusCupom = `Relaxa, obter ${percentual_restante}% de desconto não é difícel, hoje qualquer loja concede um cupom de desconto de até 10% ou por simplesmente escolher pagar à vista`
         }
@@ -35,5 +38,5 @@ if (saldo >= total){
     
 }
 
-
+// exibir resultado final
 console.log(resultado)
